@@ -1,13 +1,26 @@
 @charset "utf-8";
 /* CSS Document */
+.ui-viewport-640 body{
+	overflow:scroll;
+}
 .swiper-wrapper .q-content{
-    overflow: scroll;
+    height:auto;
+	margin-bottom:5%;
+}
+.tpl-scroll .swiper-container{
+	height: auto;
 }
 .container{
 }
+.q-top{ height:auto;}
+.q-foot{ height:auto;}
+.q-top-img{
+    height: auto;
+
+
+}
 
 .p-h1{
-    font-family:minijianyaya67562;
 	margin: 0;
     padding: 7% 0;
 	color: #333;
@@ -28,7 +41,6 @@
 }
 .p-p1
 ,.p-p2{
-	font-family:minijianyaya67562;
     padding: 0;
 	color: #000;
 	font-size: 1.4rem;

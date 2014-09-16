@@ -133,7 +133,7 @@ $(function(){
 			//alert($.cookie("p_scores"));                   //弹出结果  curious------取得该cookie的name
 			//alert($.cookie(p_scores));                     //这个，得到的是 null
 			$.cookie(p_scores,$(".q_val").val());            //存储cookie数据
-			window.location="physique.html";                 //跳转页面
+			window.location="membercenter.html";                 //跳转页面
 		}			
 		else                                                 //为完成答题
 		{
@@ -157,26 +157,29 @@ $(function(){
 	$('.q-ul').children().addClass('move_down');
 	$('.swiper-slide').last().find('li').removeClass('move_down');
 	$('.move_down').click(function(){
-		var s_height = $('.swiper-slide').height(),
-			father = $(this).parents('.swiper-slide'),
-			index_02 = father.index() + 1 ,
-			move_height = index_02 * s_height;
-
-		father.parent().css({
-								'transform':'translate3d(0px, -' + move_height + 'px, 0px)',
-							    '-webkit-transform':'translate3d(0px, -' + move_height + 'px, 0px)',
-								'transition-duration':'.8s'
-	    });
-
+		 var s_height = $('.swiper-slide').height(),
+		 father = $(this).parents('.swiper-slide'),
+		 index_02 = father.index() + 1 ,
+		 move_height = index_02 * s_height;
 		/*
-		$('.swiper-slide').each(function(){
-			var index_02 = $(this).index() + 1,
-				move_height = index_02 * s_height;
+		 var q_click = function q_click(){
+			 father.parent().css({
+				 'transform':'translate3d(0px, -' + move_height + 'px, 0px)',
+				 '-webkit-transform':'translate3d(0px, -' + move_height + 'px, 0px)',
+				 'transition-duration':'.8s'
 
-			$(this).parent().css();
-			alert(index_02)
-		})
+			 	 });
+		 }
+
+		setTimeout(q_click,1000);
 		*/
+
+		 father.parent().css({
+		 'transform':'translate3d(0px, -' + move_height + 'px, 0px)',
+		 '-webkit-transform':'translate3d(0px, -' + move_height + 'px, 0px)',
+		 'transition-duration':'.8s'
+		 });
+
 
 	});
 
