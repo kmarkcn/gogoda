@@ -27,7 +27,21 @@
     <link href="css/questionary.css" rel="stylesheet">
 
     <link href='http://www.youziku.com/webfont/CSS/f910eec20b9247d44309c04a4311056b' rel='stylesheet' type='text/css'/>
-
+	<style>
+    .goto_up{ 
+		width: 30%;
+		position: absolute;
+		left: 50%;
+		top: 75%;
+		margin: 0 -15%;
+		transition-timing-function: linear;
+		transition-property: all;
+		-webkit-transform: scale(1);
+		z-index: 100;
+		-webkit-animation: start 2.5s infinite ease-in-out;
+		-moz-animation: start 2.5s infinite ease-in-out;
+	}
+    </style>
 </head>
 
 <body>
@@ -44,161 +58,18 @@
                     	<!--以下为主要内容-->
 
                         <div class="swiper-slide" data-hash="slide_first">
-                           <div class="q-content">
-                                <h1 class="q-h1">1.	您的皮肤（包括脸颊、鼻部等）油脂分泌是否较多？</h1>
-                                <ul class="q-ul">
-                                    <li class="q-li-03" ggscore="3"><span>较多，油性发质</span></li>
-                                    <li class="q-li-03" ggscore="-3"><span>较少，皮肤和嘴唇较干燥</span></li>
-                                    <li class="q-li-03" ggscore="0"><span>适中</span></li>
-                                </ul>
-                        	</div>
+                           <img src="img/questionary/goto_01.png" width="100%" height="100%">
+                           <img class="goto_up" src="img/questionary/goto_up.png">
                         </div>
                         
                         <div class="swiper-slide" data-hash="slide_2">
-                           <div class="q-content">
-                                <h1 class="q-h1">2.	您喜冷还是喜热？</h1>
-                                <ul class="q-ul">
-                                    <li class="q-li-03" ggscore="3"><span>喜冷（穿衣服较多，喜欢冰的东西）</span></li>
-                                    <li class="q-li-03" ggscore="-3"><span>喜热(穿衣服较少，喜欢热的东西)</span></li>
-                                    <li class="q-li-03" ggscore="0"><span>无明显偏好</span></li>
-            
-                                </ul>
-                        	</div>
+                           <img src="img/questionary/goto_02.png" width="100%" height="100%">
                         </div>
                         
                         <div class="swiper-slide" data-hash="slide_3">
-                            <div class="q-content">
-                                 <h1 class="q-h1">3. 您容易疲乏吗？</h1>
-                                 <ul class="q-ul">
-                                     <li class="q-li-01" ggscore="-3"><span>经常或相当</span></li>
-                                     <li class="q-li-01" ggscore="0"><span>有时或有些</span></li>
-                                     <li class="q-li-03" ggscore="3"><span>很少或有一点</span></li>
-                                 </ul>
-                            </div>
+                            <img src="img/questionary/goto_03.png" width="100%" height="100%">
                         </div>
                         
-                        <div class="swiper-slide" data-hash="slide_4" >
-                             <div class="q-content">
-                                <h1 class="q-h1">4.	你的皮肤容易生疮么（包括口腔溃疡）？</h1>
-                                <ul class="q-ul">
-                                    <li class="q-li-03" ggscore="1"><span>容易（半年内有一次）</span></li>
-                                    <li class="q-li-03" ggscore="-1"><span>不容易（半年以上一次）</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!--
-                        <div class="swiper-slide" data-hash="slide_5" >
-                             <div class="q-content">
-                                <h1 class="q-h1">5.	您平时容易感冒吗？</h1>
-                                <ul class="q-ul">
-                                    <li class="q-li-02" ggscore="1"><span>容易（半年内有一次）</span></li>
-                                    <li class="q-li-02" ggscore="-1"><span>不容易（半年以上一次）</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        -->
-                        <div class="swiper-slide" data-hash="slide_5">
-                            <div class="q-content">
-                                <h1 class="q-h1">5.	你常感觉到口渴吗？</h1>
-                                <ul class="q-ul">
-                                    <li class="q-li-03" ggscore="3"><span>经常</span></li>
-                                    <li class="q-li-03" ggscore="-3"><span>很少</span></li>
-                                    <li class="q-li-03" ggscore="0"><span>没感觉</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide" data-hash="slide_6">
-                            <div class="q-content">
-                                <h1 class="q-h1">6.	您受凉或者吃凉的东西后，容易拉肚子吗？</h1>
-                                <ul class="q-ul">
-                                    <li class="q-li-01" ggscore="-5"><span>经常</span></li>
-                                    <li class="q-li-01" ggscore="0"><span>有时</span></li>
-                                    <li class="q-li-03" ggscore="5"><span>很少</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide" data-hash="slide_7">
-                            <div class="q-content">
-                                <h1 class="q-h1">7.	您容易失眠（没有好的睡眠质量）吗？</h1>
-                                <ul class="q-ul">
-                                    <li class="q-li-01" ggscore="3"><span>经常</span></li>
-                                    <li class="q-li-01" ggscore="0"><span>有时</span></li>
-                                    <li class="q-li-03" ggscore="-3"><span>很少</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide" data-hash="slide_8">
-                            <div class="q-content">
-                                <h1 class="q-h1">8.	闲暇时，如果您精力也充沛，您偏向什么样的活动？</h1>
-                                <ul class="q-ul">
-                                    <li class="q-li-03" ggscore="3"><span>运动性较强的活动（球类、游泳等）</span></li>
-                                    <li class="q-li-03" ggscore="-3"><span>较安静的活动（散步、棋排等）</span></li>
-                                    <li class="q-li-03" ggscore="0"><span>无偏向</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide" data-hash="slide_9">
-                            <div class="q-content">
-                                <h1 class="q-h1">9. 您的食量？</h1>
-                                <ul class="q-ul">
-                                    <li class="q-li-03" ggscore="2"><span>比一般人大</span></li>
-                                    <li class="q-li-03" ggscore="-2"><span>比一般人小</span></li>
-                                    <li class="q-li-03" ggscore="0"><span>正常</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide" data-hash="slide_10">
-                            <div class="q-content">
-                                <h1 class="q-h1">10. 您的精力旺盛吗？</h1>
-                                <ul class="q-ul">
-                                    <li class="q-li-03" ggscore="5"><span>旺盛，干起事来风风火火</span></li>
-                                    <li class="q-li-03" ggscore="-5"><span>不旺盛，干起事来容易累</span></li>
-                                    <li class="q-li-03" ggscore="0"><span>一般，不好判断</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide" data-hash="slide_11">
-                            <div class="q-content">
-                                <h1 class="q-h1">11. 您容易精神紧张，焦虑不安吗？？</h1>
-                                <ul class="q-ul">
-                                    <li class="q-li-01" ggscore="3"><span>经常</span></li>
-                                    <li class="q-li-01" ggscore="0"><span>有时</span></li>
-                                    <li class="q-li-03" ggscore="-3"><span>很少</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide" data-hash="slide_12">
-                            <div class="q-content">
-                                <h1 class="q-h1">12. 您运动量稍大就容易出虚汗吗？</h1>
-                                <ul class="q-ul">
-                                    <li class="q-li-03" ggscore="0"><span>有时或有些</span></li>
-                                    <li class="q-li-03" ggscore="-5"><span>很少或有一点 </span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!--
-                        <div class="swiper-slide" data-hash="slide_14">
-                            <div class="q-content">
-                                <h1 class="q-h1">14. 您容易有黑眼圈吗？</h1>
-                                <ul class="q-ul">
-                                    <li class="q-li-01" ggscore="-5"><span>经常（或相当）</span></li>
-                                    <li class="q-li-01" ggscore="5"><span>有时（或有些）</span></li>
-                                    <li class="q-li-03" ggscore="0"><span>很少（或没有）</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        -->
-
-
-                        <input class="q_val" type="hidden" >
-
                         <!--以上为主要内容-->
                     </div>
                 </div>
@@ -215,10 +86,40 @@
         </div>
     </div>
 </div>
+
 <script src="js/questionary/jquery-2.0.3.min.js" onerror="_cdnFallback(this)"></script>
 <script src="js/questionary/idangerous.swiper.2.6.1.min.js" onerror="_cdnFallback(this)"></script>
 <script src="js/jquery.cookie.js"></script>
 <script src="js/questionary/scroll_99ac61944f.js" onerror="_cdnFallback(this)"></script>
-<script src="js/questionary.js"></script>
 
+
+<!--
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+-->
+<script type="text/javascript">
+$(function(){
+	
+	function gotoquestionary(){
+		window.location="questionary.html";   
+	}
+	function lastpage(){
+		var getclass = $('.swiper-wrapper').children().last().attr('class'),
+		className = 'swiper-slide';
+		if(getclass == className){
+			
+		}
+		else{
+			setTimeout(gotoquestionary,2000)
+			//window.location="questionary.html";  
+		}
+	}
+	setInterval(lastpage,1000)
+	//alert(aaa)
+	/*
+	$('.swiper-wrapper').children().last().on("touchstart",function(){
+		alert(1111)
+	  });
+	*/
+})
+</script>
 </body></html>
