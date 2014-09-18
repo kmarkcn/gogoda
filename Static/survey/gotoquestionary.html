@@ -41,6 +41,15 @@
 		-webkit-animation: start 2.5s infinite ease-in-out;
 		-moz-animation: start 2.5s infinite ease-in-out;
 	}
+	.gotopage{
+		width: 30%;
+		position: absolute;
+		left: 50%;
+		top: 75%;
+		margin: 0 -15%;
+		z-index: 100;
+
+	}
     </style>
 </head>
 
@@ -58,16 +67,18 @@
                     	<!--以下为主要内容-->
 
                         <div class="swiper-slide" data-hash="slide_first">
-                           <img src="img/questionary/goto_01.png" width="100%" height="100%">
+                           <img src="img/questionary/goto_02.png" width="100%" height="100%">
                            <img class="goto_up" src="img/questionary/goto_up.png">
                         </div>
                         
                         <div class="swiper-slide" data-hash="slide_2">
-                           <img src="img/questionary/goto_02.png" width="100%" height="100%">
+                           <img src="img/questionary/goto_01.png" width="100%" height="100%">
+                           <img class="goto_up" src="img/questionary/goto_up.png">
                         </div>
                         
                         <div class="swiper-slide" data-hash="slide_3">
                             <img src="img/questionary/goto_03.png" width="100%" height="100%">
+
                         </div>
                         
                         <!--以上为主要内容-->
@@ -102,6 +113,7 @@ $(function(){
 	function gotoquestionary(){
 		window.location="questionary.html";   
 	}
+
 	function lastpage(){
 		var getclass = $('.swiper-wrapper').children().last().attr('class'),
 		className = 'swiper-slide';
@@ -109,17 +121,13 @@ $(function(){
 			
 		}
 		else{
-			setTimeout(gotoquestionary,2000)
+			setTimeout(gotoquestionary,1000)
 			//window.location="questionary.html";  
 		}
 	}
 	setInterval(lastpage,1000)
-	//alert(aaa)
-	/*
-	$('.swiper-wrapper').children().last().on("touchstart",function(){
-		alert(1111)
-	  });
-	*/
+	
+	
 })
 </script>
 </body></html>

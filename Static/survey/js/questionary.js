@@ -118,7 +118,7 @@ $(function(){
 				$('.q_val').val(0);
 				//alert('您为寒性体质');
 			}
-			if(-5<scores&&scores<5)                                   //平和体质
+			if(-5<scores&&scores<5)                         //平和体质
 			{
 				$('.q_val').val(1);
 				//alert('您为平和体质');
@@ -138,42 +138,54 @@ $(function(){
 		else                                                 //为完成答题
 		{
 			var number = index - arr_count.length;			 //得到未作答的题数
-			alert('亲，您还有 '+number+' 道题未作答，请完善！');
+			//alert('亲，您还有 '+number+' 道题未作答，请完善！');
+			var q_father = $('.swiper-wrapper');
+			q_father.children('.swiper-slide').css({
+				'transform':'translate3d(0px, 0px, 0px)',
+				'-webkit-transform':'translate3d(0px, -0px, 0px)',
+				'transition-duration':'.8s'
+			});
+			
+			$('.swiper-slide').addClass('q_select');
+			//$('.q-time').hide();
+			$('.q-ul').children('li').has('.q-li-bg').parents('.swiper-slide').removeClass('q_select');
+			var q_number = new Array();
+			q_father.children('.q_select').each(function(){
+				q_number.push($(this).index());
+
+			});
+			var q_height = $('.swiper-slide').height() * q_number[0];
+
+			//alert(q_number[0]);
+			q_father.css({
+				'transform':'translate3d(0px, -' + q_height + 'px, 0px)',
+				'-webkit-transform':'translate3d(0px, -' + q_height + 'px, 0px)',
+				'transition-duration':'.8s'
+			});
+			//$('.q-ul').children().removeClass('move_down').click(function(){gg_count();});
+
+			//alert(q_height);
 		}
-		
-		
-		
 	}
 
 
 	//最后一题添加判断事件
-	$('.swiper-slide').last().find('li').click(function(){
+	$('.swiper-slide').find('li').click(function(){
 		gg_count();
-		$(this).removeClass('move_down');
-	})
+		//$(this).removeClass('move_down');
+	});
 
 
-	//点击下滑
-	$('.q-ul').children().addClass('move_down');
-	$('.swiper-slide').last().find('li').removeClass('move_down');
+	//点击下
+	/*
+	$('.q-ul').children().addClass('move_down');		//添加类名方便操作
+	$('.swiper-slide').last().find('li').removeClass('move_down'); 	//不操作最后一题
 	$('.move_down').click(function(){
-		 var s_height = $('.swiper-slide').height(),
-		 father = $(this).parents('.swiper-slide'),
-		 index_02 = father.index() + 1 ,
-		 move_height = index_02 * s_height;
-		/*
-		 var q_click = function q_click(){
-			 father.parent().css({
-				 'transform':'translate3d(0px, -' + move_height + 'px, 0px)',
-				 '-webkit-transform':'translate3d(0px, -' + move_height + 'px, 0px)',
-				 'transition-duration':'.8s'
-
-			 	 });
-		 }
-
-		setTimeout(q_click,1000);
-		*/
-
+		 var s_height = $('.swiper-slide').height(),		//设备高度
+		 father = $(this).parents('.swiper-slide'),			
+		 index_02 = father.index() + 1 ,					//index
+		 move_height = index_02 * s_height;					//垂直位移
+		 //移动
 		 father.parent().css({
 		 'transform':'translate3d(0px, -' + move_height + 'px, 0px)',
 		 '-webkit-transform':'translate3d(0px, -' + move_height + 'px, 0px)',
@@ -182,6 +194,6 @@ $(function(){
 
 
 	});
+	*/
 
-
-})
+});
