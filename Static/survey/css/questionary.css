@@ -17,6 +17,7 @@ html,body{
 }
 */
 body{
+    
     background-color: #f9f9f9;
 }
 .swiper-slide{
@@ -49,7 +50,7 @@ body{
 	-webkit-animation: turnBig .3s linear forwards;
 }
 .q-h1{
-    font-family:minijianyaya67562;
+    font-family:HanWangYenThin-Gb571063;
     margin: 0;
     padding: 7% 0;
 	color: #333;
@@ -59,7 +60,8 @@ body{
 	letter-spacing: 0.2rem;
 }
 span{
-    font-family:minijianyaya67562;
+    /*font-family:minijianyaya67562;*/
+	font-family:HanWangYenThin-Gb571063;
 }
 .q-u{
 	width: 100%;
@@ -116,10 +118,10 @@ span{
 }
 .q-time{
 	position: absolute;
-	right: 3%;
+	right: 1%;
 	bottom: 1%;
 	height: 42%;
-	width:  8%;
+	width:  10%;
 	
 }
 
@@ -134,11 +136,11 @@ span{
 ,.q-time-body
 ,.q-time-bottom{
 	margin: auto;
-	width: 50%;
+	width: 40%;
 	
 }
 .q-time-top{
-	
+	margin-top: 12%;
 	height: 5%;
 	border-radius: 50% 50% 0 0;
 	border: 1px solid #ccc;
@@ -159,7 +161,7 @@ span{
 	position: relative;
 	margin: auto;
 	top: -1.4%;
-	height: 15%;
+	height: 16%;
 	width: 100%;
 	border-radius: 50%;
 	border: 1px solid #ccc;
