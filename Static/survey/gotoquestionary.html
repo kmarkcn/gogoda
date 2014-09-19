@@ -67,17 +67,18 @@
                     	<!--以下为主要内容-->
 
                         <div class="swiper-slide" data-hash="slide_first">
-                           <img src="img/questionary/goto_02.png" width="100%" height="100%">
+                           <img src="img/questionary/goto_01.gif" width="100%" height="100%">
                            <img class="goto_up" src="img/questionary/goto_up.png">
                         </div>
                         
                         <div class="swiper-slide" data-hash="slide_2">
-                           <img src="img/questionary/goto_01.png" width="100%" height="100%">
+                           <img src="img/questionary/goto_02.gif" width="100%" height="100%">
                            <img class="goto_up" src="img/questionary/goto_up.png">
                         </div>
                         
-                        <div class="swiper-slide" data-hash="slide_3">
-                            <img src="img/questionary/goto_03.png" width="100%" height="100%">
+                        <div id="goto_lastpage" class="swiper-slide" data-hash="slide_3">
+                        	<img class="goto_up" src="img/questionary/goto_up.png">
+                            <img  src="img/questionary/goto_03.gif" width="100%" height="100%">
 
                         </div>
                         
@@ -109,7 +110,7 @@
 -->
 <script type="text/javascript">
 $(function(){
-	
+	/*
 	function gotoquestionary(){
 		window.location="questionary.html";   
 	}
@@ -126,8 +127,11 @@ $(function(){
 		}
 	}
 	setInterval(lastpage,1000)
-	
-	
+	*/
+	function touchEnd(e){
+		window.location="questionary.html"; 
+	}
+	document.getElementById("goto_lastpage").addEventListener('touchend', touchEnd,false);  
 })
 </script>
 </body></html>
