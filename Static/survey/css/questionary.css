@@ -4,6 +4,7 @@
 @font-face{
 	font-family: zhs;
 	src: url('../font/zhs.TTF') format('truetype');
+
 }
 
 html,body{
@@ -17,7 +18,7 @@ html,body{
 }
 */
 body{
-    
+
     background-color: #f9f9f9;
 }
 .swiper-slide{

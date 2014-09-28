@@ -66,6 +66,8 @@ img{vertical-align:middle;border:none;}
 ,.swiper-wrapper
 ,.ui-viewport-640 body .content-body
 ,.ui-viewport-640 body .content
+,.goto
+,.mc_modify
 {
 	margin: auto;
 	min-width: 320px;

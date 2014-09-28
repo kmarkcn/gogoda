@@ -1,6 +1,151 @@
 @charset "utf-8";
 /*测试*/
+.htmlbody{
+    position: relative;
+    height: auto;
+    overflow: auto;
+}
+.htmlbody_bg{ background-color: gray;}
+.mc_modify{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: white ;
+    box-shadow: inset 0 0 .5rem #ccc;
+}
+.modify_top{
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 2rem;
+    font-family: "微软雅黑", "黑体", "宋体";
+    background-color: #ccc;
+    color: #666;
+}
+.modify_table{
+    width: 100%;
+}
+.modify_table td{
+    position: relative;
+    line-height:  4.8rem;
+    font-size: 1.6rem;
+    font-family: "微软雅黑", "黑体", "宋体";
+    color: #666;
+}
+.modify_input{
+    margin: 0;
+    width: 90%;
+    height: 3.2rem;
+    font-size: 1.4rem;
+}
+.modify_02{
+    margin-top: 1rem;
+    height: 7.2rem;
+    line-height: 1.8rem;
+}
+.modify_03{
+    vertical-align: top;
+}
+.modify_td_01{
+    padding-right: 5%;
+    width: 25%;
+    text-align: right;
+}
+.modify_td_02{
+    width: 75%;
+    text-align: left;
 
+}
+.modify_label{
+    margin: 0;
+    width: 40%;
+    text-align: left;
+}
+.mc_modify .modify_border{
+    border-color: red ;
+    box-shadow: 0 0 .3rem red;
+}
+.modify_ts{
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+.modify_btn_true
+,.modify_btn_false{
+    padding: 0 1rem;
+    width: 40%;
+    height: 4rem;
+    line-height: 3.5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "微软雅黑", "黑体", "宋体";
+    letter-spacing: .5rem;
+    border: 2px solid #ccc;
+    background-color: #F2F2F2;
+    color: #666;
+    box-shadow: 0 0 .5rem #ccc;
+    cursor: pointer;
+}
+.modify_btn_true{ float: left;}
+.modify_btn_false{ float: right;}
+.modify_foot{
+    padding: 1rem 0;
+    margin: auto;
+    width: 80%;
+    height: 6rem;
+}
+
+/*以下是提示模板*/
+
+.input_ts_father{
+    position: absolute;
+    z-index: 999;
+    top: -5rem;
+}
+.input_ts{
+    position: relative;
+    text-align: center;
+    /*
+    border: 1px solid red;
+    */
+}
+.ts_content{
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.2rem;
+    border-radius: 6%;
+    padding: 0 1.2rem 0 4rem;;
+    color: red;
+    display: inline-block;
+    border: 1px solid gray;
+    box-shadow: 0 0 5px gray;
+    background-color: white;
+}
+.ts_expression{
+    display: inline-block;
+    position: absolute;
+    top:.8rem;
+    left: .6rem;
+    width: 3rem;
+    height: 3rem;
+    background-image: url("../img/questionary/expression.png");
+    background-repeat: no-repeat;
+    background-position: 0 -3rem;
+    background-size: 3rem;
+}
+.ts_guide{
+    position: absolute;
+    top: 4.5rem;
+    left: 45%;
+    border-top: .8rem solid gray;
+    border-left: .8rem solid transparent;
+    border-right: .8rem solid transparent;
+    border-bottom: none;
+}
+/*以上是提示模板*/
 .mc_foot .mc_foot_01
 ,.mc_foot .mc_foot_03
 ,.mc_foot .mc_foot_04{
@@ -16,6 +161,7 @@
 
 
 .mc{
+    position: relative;
     min-height: 100%;
     background-color: white;
 }
@@ -24,7 +170,7 @@
 }
 .mc_head_top{
     position: relative;
-    z-index: 1;
+    z-index: -1;
 }
 .mc_top_bg{
     width: 100%;
@@ -93,7 +239,6 @@
     line-height: 1.6rem;
     text-align: center;
     font-weight: 500;
-
 }
 .mc_head_left{
     left: 0;
@@ -295,16 +440,14 @@
     text-align: right;
 }
 .mc_td_02{
-    width: 51%;
+    width: 73%;
     text-align: right;
+    padding-right: 5%;
 }
-.mc_td_03{
-    width: 21%;
-    text-align: right;
-}
+
 .mc_btn_change{
     cursor: pointer;
-    width: 60%;
+    width: 25%;
 }
 .mc_span_01{
     font-size: 1.4rem;

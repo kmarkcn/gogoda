@@ -62,7 +62,8 @@ $(function(){
 	//遍历题数，显示进度条，进度条的显示基于CSS3。
 	$('.q-ul').children('li').click(function(){
 		var index = $('.q-ul').children('li').has('.q-li-bg').length,//遍历元素的索引
-			number = 12,											    //总题数
+			//number = 12,
+			number = $('.swiper-slide').length;                     //总题数
 			//获取进度条中间的百分比
 			percent = (1 - index / (number - 1)) * 100 +'%';
 
@@ -113,7 +114,7 @@ $(function(){
 			{
 				$('.q_val').val(0);
 			}
-			if(-5<scores&&scores<5)                         //平和体质
+			if(-5<=scores&&scores<=5)                         //平和体质
 			{
 				$('.q_val').val(1);
 			}
@@ -149,7 +150,6 @@ $(function(){
 			var q_number = new Array();
 			q_father.children('.q_select').each(function(){ //遍历没有答题的页面
 				q_number.push($(this).index());             //将没答题的页面index传入数组
-
 			});
 			var q_height = $('.swiper-slide').height() * q_number[0];  //定义并获取验证答题页面高度，通过每次查找数组的第一位
 
