@@ -1,6 +1,9 @@
 /**
  * Created by Administrator on 14-9-15.
  */
+
+ 
+ 
 //日期插件的调用
 J(function(){
 	J('#cal1').calendar({ format:'yyyy年MM月dd日' });
@@ -10,6 +13,11 @@ J(function(){
 });
 
 $(function(){
+	 //form input样式插件
+	 //radio按钮插件
+	 $('form').jqTransform({imgPath:'jqtransformplugin/img/'});
+	
+	
 	//点击切换体质，信息，充值
 	$('.mc_middle_li').click(function(){
 		var index = $(this).index() + 1;
@@ -141,10 +149,12 @@ $(function(){
 		}
 
 	});
+	/*
 	//点击label选中按钮
 	$('.modify_label').click(function(){
 		$(this).children().checked();
 	});
+	*/
 	//获取焦点
 	$('.modify_input').focus(function(){
 		$(this).removeClass('modify_border').siblings('.input_ts_father').remove();
