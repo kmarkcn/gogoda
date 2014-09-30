@@ -16,11 +16,30 @@ $(function(){
 	 //form input样式插件
 	 //radio按钮插件
 	 $('form').jqTransform({imgPath:'jqtransformplugin/img/'});
-	
+
+	//判断性别加载CSS
+	/*
+	var sss = $('.mc_user_sex').hasClass('mc_user_man'),
+		skin_blue = $('<link href="css/skin_blue.css" rel="stylesheet">'),
+		skin_purple = $('<link href="css/skin_purple.css" rel="stylesheet">');
+
+	if(sss)
+	{
+		$('head').append(skin_blue);
+		alert(1111);
+	}
+	else
+	{
+		$('head').append(skin_purple);
+		alert(2222);
+	}
+	*/
+	//头像宽度等于高度
+	$('.mc_user_img').height($('.mc_user_img').width());
 	
 	//点击切换体质，信息，充值
 	$('.mc_middle_li').click(function(){
-		var index = $(this).index() + 1;
+		var index = $(this).index();
 		$(this).removeClass('mc_li_shadow').addClass('mc_li_inset').siblings().removeClass('mc_li_inset').addClass('mc_li_shadow');
 		$('.mc_foot').children()
 					 .eq(index)
@@ -119,7 +138,7 @@ $(function(){
 				'top': scroll_move + 'px',
 				'left':left_move + 'px',
 				'display': 'block'
-			}).animate({left:animate_move},'fast');
+			}).animate({left:animate_move},'400');
 			append_div.show();
 		}
 		//判断修改页面的显示
@@ -133,7 +152,7 @@ $(function(){
 				{
 					htmlbody.removeClass('htmlbody_bg');   //为html,body移除添加背景
 					append_div.css('display','none');
-					mc_modify.animate({left:left_move},'fast',function(){
+					mc_modify.animate({left:left_move},'400',function(){
 						$(this).hide();
 					});
 				}
@@ -142,13 +161,59 @@ $(function(){
 			{
 				htmlbody.removeClass('htmlbody_bg');   //为html,body移除添加背景
 				append_div.css('display','none');
-				mc_modify.animate({left:left_move},'fast',function(){
+				mc_modify.animate({left:left_move},'400',function(){
 					$(this).hide();
 				});
 			}
 		}
 
 	});
+
+	//点击事件
+	$('.habitus_toggle').click(function(){
+		//$(this).css({'position':'relative','z-index':'222'});
+		var mc_habitus = $('.mc_habitus'),                            //
+			animate_move = (body.width() - mc_habitus.width()) / 2,  //动画移动的距离
+			left_move = (body.width() + mc_habitus.width()) / 2,     //动画向左移动的距离
+			scroll_move = $(document).scrollTop(),                  //滚动条到顶部的垂直距离
+			htmlbody = $('.htmlbody');
+
+		var habitus_height = window.innerHeight;
+		mc_habitus.css('min-height',habitus_height +'px');
+		append_div.css({
+			'position':'absolute',
+			'z-index':'99',
+			'top':'0',
+			'left':'0',
+			'width': '100%',
+			'height': '100%',
+			'opacity':'.5',
+			'background-color':'gray'
+		});
+		//判断修改页面的不显示
+		if(mc_habitus.css('display')== 'none')
+		{
+			htmlbody.addClass('htmlbody_bg');   //为html,body添加背景
+			mc_habitus.css                       //定义位置和移动的动画
+			({
+				'top': scroll_move + 'px',
+				'left':left_move + 'px',
+				'display': 'block'
+			}).animate({left:animate_move},'fast');
+			append_div.show();
+		}
+		//判断修改页面的显示
+		else
+		{
+			htmlbody.removeClass('htmlbody_bg');   //为html,body移除添加背景
+			append_div.css('display','none');
+			mc_habitus.animate({left:left_move},'fast',function(){
+				$(this).hide();
+			});
+		}
+
+	});
+
 	/*
 	//点击label选中按钮
 	$('.modify_label').click(function(){

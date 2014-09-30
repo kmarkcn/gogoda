@@ -128,7 +128,7 @@ $(function(){
 			//alert($.cookie(p_scores));                     //这个，得到的是 null
 			$.cookie(p_scores,$(".q_val").val());            //存储cookie数据
 			function gogogo(){                               //跳转页面函数
-				window.location="membercenter.html"
+				window.location="habitus.html"
 			}
 			setTimeout(gogogo,1000);   //延迟一秒跳转页面
 

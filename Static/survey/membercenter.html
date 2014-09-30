@@ -21,10 +21,27 @@
     <title>会员中心</title>
 </head>
 <body class="htmlbody">
+    <!--以下是个人体质遮罩层-->
+    <div class="mc_habitus">
+        <div class="habitus_top">
+            <img class="q-top-return habitus_toggle" src="img/questionary/questionary_04.png">
+            <img class="h_t_img" src="img/questionary/questionary_01.png">
+        </div>
+        <div class="mc_foot_02">
+            <input class="mc_02_val" type="hidden">
+            <h1 class="mc_02_h1">您的体质为<span class="mc_02_color mc_02_color_01"></span>体质</h1>
+            <p class="mc_02_p1"></p>
+            <p class="mc_02_p2"></p>
+            <p class="mc_02_p3"><span class="mc_02_span"></span>&nbsp;<img class="mc_logo" src="img/membercenter/logo.png"/></p>
+        </div>
+        <div class="habitus_foot"><img src="img/questionary/questionary_02.png"></div>
+    </div>
+
+    <!--以上是个人体质遮罩层-->
+    <!--以下是个人信息修改遮罩层-->
     <div class="mc_modify">
         <div class="modify_top">个人信息修改</div>
         <table class="modify_table">
-        
             <tr>
                 <td class="modify_td_01 modify_03"></td>
                 <td class="modify_td_02">
@@ -70,7 +87,7 @@
         </div>
     </div>
 
-    <!--遮罩层-->
+    <!--以上是个人信息修改遮罩层-->
     <div class="mc">
         <!--以下头部-->
         <div class="mc_head">
@@ -98,14 +115,17 @@
                 class="mc_user_man" 表示为男性
                 class="mc_user_woman" 表示为女性
             -->
-            <div class="mc_user_man">果果哒</div>
+            <div class="mc_user_sex mc_user_man">果果哒</div>
+            <div class="mc_btn_habitus habitus_toggle">
+                <h1><span class="mc_02_color"></span>体质</h1>
+            </div>
         </div>
         <!--以上头部-->
         <div class="mc_middle">
             <ul class="mc_middle_ul">
                 <li class="mc_middle_li mc_li_inset">
-                    <h1><span class="mc_02_color"></span>体质</h1>
-                    您的体质
+                    <h1>购买记录</h1>
+                    日期
                 </li>
                 <li class="mc_middle_li mc_li_shadow">
                     <h1>个人信息</h1>
@@ -125,13 +145,13 @@
         <div class="mc_foot">
             <!--默认-->
             <div class="mc_foot_01">
-                <div class="mc_foot_head">
+                <div class="mc_foot_head" style="display: none;">
                     <img class="mc_foot_img" src="img/membercenter/membercenter_06.png">
                     <h1>历史购买记录</h1>
                 </div>
-                <div class="mc_foot_list">
+                <div class="mc_foot_list" style="padding-top: 5%; padding-bottom: 5%;">
                     <ul class="mc_list_ul">
-                        <li>
+                        <li >
                             <img  src="img/membercenter/membercenter_07.png">
                             <h2>您于<span>10月25日</span>订购了一个月的果果哒</h2>
                             <p>时间<span>2014年10月26日</span>至<span>2014年11月26日</span></p>
@@ -153,6 +173,7 @@
                 </div>
             </div>
             <!--体质-->
+            <!--
             <div class="mc_foot_02">
                 <input class="mc_02_val" type="hidden">
                 <h1 class="mc_02_h1">您的体质为<span class="mc_02_color mc_02_color_01"></span>体质</h1>
@@ -160,6 +181,7 @@
                 <p class="mc_02_p2"></p>
                 <p class="mc_02_p3"><span class="mc_02_span"></span>&nbsp;<img class="mc_logo" src="img/membercenter/logo.png"/></p>
             </div>
+            -->
             <!--信息-->
             <div class="mc_foot_03">
                 <table class="mc_table">
